@@ -2,11 +2,13 @@ import React, { Component } from "react";
 import './App.css';
 import Heading from './components/Heading';
 import Table from './components/Table';
+import SearchBar from './components/SearchBar';
 import API from './utils/API';
 
 class App extends Component {
   state = {
-    users: []
+    users: [],
+    search: ""
   }
 
   componentDidMount() {
@@ -16,12 +18,23 @@ class App extends Component {
     })
   }
 
+  handleInputChange = event => {
+    // Getting the value and name of the input which triggered the change
+    let value = event.target.value;
+    const name = event.target.name;
+
+    // Updating the input's state
+    this.setState({
+      [name]: value
+    });
+  };
 
 
   render() {
     return (
       <div className="App">
         <Heading />
+        <SearchBar />
         <Table emps={this.state.users} />
       </div>
     );
