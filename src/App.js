@@ -18,6 +18,7 @@ class App extends Component {
     })
   }
 
+  // pass down as prop; pass it as this.handleInputChange (same as Table with emps below)
   handleInputChange = event => {
     // Getting the value and name of the input which triggered the change
     let value = event.target.value;
