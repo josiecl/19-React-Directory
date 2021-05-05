@@ -13,12 +13,13 @@ return (
             </tr>
         </thead>
         <tbody>
-            {props.emps.map(user => (
+        {/* .filter(user => user.name.first.toLowerCase().includes(props.search)) */}
+            {props.emps.map(filteredUser => (
                 <tr>
-                <th scope="row"><img src={user.picture.thumbnail} alt="picture of employee" /></th>
-                <td>{user.name.first} {user.name.last}</td>
-                <td>{user.phone}</td>
-                <td>{user.email}</td>
+                <th scope="row"><img src={filteredUser.picture.thumbnail} alt="picture of employee" /></th>
+                <td>{filteredUser.name.first} {filteredUser.name.last}</td>
+                <td>{filteredUser.phone}</td>
+                <td>{filteredUser.email}</td>
                 </tr>
             ))}
 

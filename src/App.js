@@ -23,6 +23,12 @@ class App extends Component {
     // Getting the value and name of the input which triggered the change
     let value = event.target.value;
     const name = event.target.name;
+    console.log(event.target.value);
+    console.log(event.target.name);
+
+    //before the lower set state, add line of code to filter
+
+    this.setState({users: [this.state.users[0]]})
 
     // Updating the input's state
     this.setState({
@@ -35,11 +41,21 @@ class App extends Component {
     return (
       <div className="App">
         <Heading />
-        <SearchBar />
+        <SearchBar
+          search={this.state.search}
+          handleInputChange={this.handleInputChange}
+         
+        />
         <Table emps={this.state.users} />
       </div>
     );
   }
 }
+
+{/* <SearchForm
+          search={this.state.search}
+          handleFormSubmit={this.handleFormSubmit}
+          handleInputChange={this.handleInputChange}
+        /> */}
 
 export default App;
