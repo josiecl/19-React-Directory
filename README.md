@@ -4,7 +4,7 @@
 * [Description](#description)
 * [Usage](#usage)
 * [Contributing](#contributing)
-* [Questions](#questions)
+* [Github](#github)
 * [Screenshots](#screenshots)
 * [Link](#link)
 
@@ -17,10 +17,8 @@ To use, navigate to the deployed link [below](#link).
 ## Contributing
 Email for questions about contributions.
 
-## Questions
+## Github
 * https://github.com/josiecl
-
-* For further questions, email me at josiecollinsrc@gmail.com
 
 ## Screenshots
 ![Screenshot 1](https://user-images.githubusercontent.com/74507818/118062827-70c19f80-b35d-11eb-8672-5d5d09b6c991.PNG)
@@ -30,3 +28,5 @@ Email for questions about contributions.
 ![Screenshot 3](https://user-images.githubusercontent.com/74507818/118062825-70290900-b35d-11eb-8c63-9c977c3ca008.PNG)
 
 ## Link
+
+[Deployed site](https://josiecl.github.io/19-React-Directory)
