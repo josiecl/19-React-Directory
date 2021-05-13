@@ -29,16 +29,6 @@ class App extends Component {
     });
 
     console.log(event.target.value);
-    // console.log(event.target.name);
-
-    //before the lower set state, add line of code to filter
-
-    // let filteredList = this.state.users.filter(user => {
-    //   user.name.first.toLowerCase().includes(value.toLowerCase())
-    // });
-
-    //  this.setState({filteredUsers: filteredList})
-    
 
     // Updating the input's state
     this.setState({
