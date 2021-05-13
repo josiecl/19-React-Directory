@@ -8,13 +8,14 @@ import API from './utils/API';
 class App extends Component {
   state = {
     users: [],
-    search: ""
+    search: "",
+    filteredUsers: []
   }
 
   componentDidMount() {
     API.getUsers().then(res => {
       console.log(res);
-      this.setState({users: res.data.results})
+      this.setState({users: res.data.results, filteredUsers: res.data.results})
     })
   }
 
@@ -23,12 +24,21 @@ class App extends Component {
     // Getting the value and name of the input which triggered the change
     let value = event.target.value;
     const name = event.target.name;
+    this.setState({
+      search: value
+    });
+
     console.log(event.target.value);
-    console.log(event.target.name);
+    // console.log(event.target.name);
 
     //before the lower set state, add line of code to filter
 
-    this.setState({users: [this.state.users[0]]})
+    // let filteredList = this.state.users.filter(user => {
+    //   user.name.first.toLowerCase().includes(value.toLowerCase())
+    // });
+
+    //  this.setState({filteredUsers: filteredList})
+    
 
     // Updating the input's state
     this.setState({
@@ -46,7 +56,7 @@ class App extends Component {
           handleInputChange={this.handleInputChange}
          
         />
-        <Table emps={this.state.users} />
+        <Table emps={this.state.filteredUsers} search={this.state.search} />
       </div>
     );
   }

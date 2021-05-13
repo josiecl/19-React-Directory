@@ -14,7 +14,7 @@ return (
         </thead>
         <tbody>
         {/* .filter(user => user.name.first.toLowerCase().includes(props.search)) */}
-            {props.emps.map(filteredUser => (
+            {props.emps.filter(user => user.name.first.toLowerCase().includes(props.search.toLowerCase()) || user.name.last.toLowerCase().includes(props.search.toLowerCase())).map(filteredUser => (
                 <tr>
                 <th scope="row"><img src={filteredUser.picture.thumbnail} alt="picture of employee" /></th>
                 <td>{filteredUser.name.first} {filteredUser.name.last}</td>
